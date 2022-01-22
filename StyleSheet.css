@@ -1,9 +1,4 @@
 
-#gameMap {
-	background-color: blue;
-}
-
-
 
 h1 {
 	padding-left: 120px;
@@ -13,7 +8,7 @@ h1 {
 body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background-color: black;
-	color: blue;
+	color: silver;
 	margin: auto;
 	width: 480px;
 	height: 180px;
