@@ -92,8 +92,8 @@ function movePlayer(x, y) {
 	var newY = player.y + y;
 	var newX = player.x + x;
 	
-	var newBoxY = player.y + (2 * y);	//New position of the box
-	var newBoxX = player.x + (2 * x);
+	var newBoxY = player.y + (y + 1);	//New position of the box
+	var newBoxX = player.x + (x + 1);
 
 	var playerElement = document.getElementById("x" + player.x + "y" + player.y);
 	var destination = document.getElementById("x" + newX + "y" + newY);
