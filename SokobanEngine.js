@@ -39,14 +39,13 @@ function initializeMap()
 							element.classList.add(tileMap01.mapGrid[row][col][0]);
 						}
 
-						element.id = "x" + row + "y" + col;
-
-						if (row === 11 && col === 11) {
-							element.classList.add("player");
+						if (tileMap01.mapGrid[row][col][0] === 'P') {
+							element.classList.add('player');
 							player.x = row;
 							player.y = col;
 						}
 
+			element.id = "x" + row + "y" + col;	
 			gameMap.appendChild(element);
 
 		}
@@ -57,6 +56,13 @@ function keyPress(event) {
 
 	var eventMove = event.keyCode;
 
+		window.addEventListener("keydown", function (event) {
+		if ([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1) {
+			event.preventDefault();
+		}
+	}, false);
+	
+	
 	switch (eventMove) {
 
 		case 38:
@@ -108,8 +114,8 @@ function movePlayer(x, y) {
 		destination.classList.add("player");
 		destination.classList.remove('B');
 
-		playerElement.classList.remove("player");  //till‰gg
-		destination.classList.add("player");   //till‰gg
+		playerElement.classList.remove("player");  //till√§gg
+		destination.classList.add("player");   //till√§gg
 		player.x = newX;
 		player.y = newY;
 
